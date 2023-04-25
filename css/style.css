@@ -1,0 +1,91 @@
+body{
+    background:  rgba(26,130,65);
+  
+}
+
+#container{    
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+    grid-template-areas: "lthd header rthd"
+                        "lfct content rtct"
+                        "ltfr footer rftr";
+
+} 
+
+
+
+#name{
+    grid-area: header;
+    color:rgb(205, 236, 119);
+    font-family: 'Gill Sans Extrabold', sans-serif;
+    font-size: 400%;
+    text-align: center;
+   
+}
+
+#login{
+    grid-area: rthd;
+    justify-self: end;
+                align-items: center;
+
+            background-color:rgb(205, 236, 119);
+
+            border: 2px solid #111;
+
+            border-radius: 8px;
+
+            box-sizing: border-box;
+
+            color: #111;
+
+            cursor: pointer;
+
+            display: inline-block;
+
+            font-family: Inter,sans-serif;
+
+            font-size: 16px;
+
+            height: 48px;
+
+            justify-content: center;
+
+            line-height: 24px;
+
+            max-width: 300%;
+
+            padding: 0 25px;
+
+            position: relative;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            user-select: none;
+
+            -webkit-user-select: none;
+
+            touch-action: manipulation;
+}
+
+#logo{
+    grid-area: content;
+    justify-self: center;
+}
+
+#start{
+    grid-area: footer;
+    justify-self: center;
+    
+}
+
+#btn{
+    background-color: rgb(26, 130, 65);
+    cursor: pointer;
+    touch-action: manipulation;
+    border-radius: 38px;
+    border: 0px;
+}
+
