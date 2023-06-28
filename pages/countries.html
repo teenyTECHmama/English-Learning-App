@@ -4,9 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Countries Game</title>
+    <style>
+        body {
+            background: rgb(2,0,36);
+            background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #back-btn {       
+            background-color: rgb(205, 236, 119);
+            border: 2px solid #111;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #111;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            height: 48px;
+            justify-content: center;
+            line-height: 24px;
+            max-width: 300%;
+            padding: 0 25px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        
+
+        #video-iframe {
+            width: 560px;
+            height: 315px;
+        }
+
+        #title {
+            position: relative;
+            text-align: center;
+            font-size: 3em;               
+            font-weight: 700;
+            color: #f5f5f5;
+            text-shadow: 1px 1px 1px #919191,
+             1px 2px 1px #919191,
+            1px 3px 1px #919191,
+            1px 4px 1px #919191,
+            1px 5px 1px #919191,
+            1px 6px 1px #919191,
+            1px 7px 1px #919191,               
+            1px 8px 1px #919191,
+            1px 9px 1px #919191,
+            1px 10px 1px #919191,
+            1px 18px 6px rgba(16,16,16,0.4),
+            1px 22px 10px rgba(16,16,16,0.2),
+            1px 25px 35px rgba(16,16,16,0.2),
+            1px 30px 60px rgba(16,16,16,0.4);
+
+        }
+
+        #exit-btn{
+            background-color: rgb(205, 236, 119);
+            border: 2px solid #111;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #111;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            height: 48px;
+            justify-content: center;
+            line-height: 24px;
+            max-width: 300%;
+            padding: 0 25px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+    </style>
 </head>
 <body>
     
+   
+     <button id="back-btn" onclick="window.location.href='game_menu.html'">BACK</button><br>
+ 
+   
+
+    <div id="video-container">
+        <h1 id="title"> Countries of the World</h1>
+        <iframe id="video-iframe" src="https://en.islcollective.com/english-esl-video-lessons/embed/816551" frameborder="0" allowfullscreen align-items="center"> </iframe>
+    </div> 
+        <button id="exit-btn" onclick="exitApp()">EXIT</button>
+   
+    <script>
+        function exitApp() {
+            // Perform any necessary cleanup or saving operations here
+
+            // Redirect the user to the home page
+            window.location.href = '../index.html'; // window.close() maybe but better suited for popup
+        }
+    </script>
+
 </body>
 </html>
