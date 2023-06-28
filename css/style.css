@@ -81,7 +81,7 @@ body{
     
 }
 
-#btn{
+.btn{
     background-color: rgb(26, 130, 65);
     cursor: pointer;
     touch-action: manipulation;
