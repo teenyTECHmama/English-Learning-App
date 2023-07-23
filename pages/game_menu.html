@@ -8,12 +8,13 @@
     <style>
 
          body {
-        background: url(../Fun\ Playful\ Bright\ Linktree\ Background.png) no-repeat center fixed;
-        background-position: 0px;
-        -webkit-background-size: 100% 100%;
-        -moz-background-size: 100% 100%;
-        -o-background-size: 100% 100%;
-        background-size: 100% 100%;
+            background: rgb(94,224,230);
+            background: linear-gradient(90deg, rgba(94,224,230,1) 0%, rgba(0,76,174,1) 100%);
+            background-position: 0px;
+            -webkit-background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            background-size: 100% 100%;
         }
 
 
@@ -43,7 +44,7 @@
 
         .secOne-container{
             display: flex;
-            gap: 5vw;
+            gap: 20vw;
         }
 
         .secOne-item {
@@ -64,10 +65,11 @@
         }
 
         .secOne-item-img {
-            height: 20vw;
-            width: 20vw;
-            border-radius: 15px;
-            border: var(--mid-blue-button) 2px solid;
+            background-color: #f5f5f5;
+            height: 30vw;
+            width: 30vw;
+            border-radius: 300px;
+            border: var(--mid-blue-button) 15px solid;
         }
 
             #name {
@@ -111,10 +113,10 @@
         </div> 
 
         <section class="secOne-wrapper"> 
-            <h1 id="name">Game Menu</h1>
+            <h1 id="name">Game <img src="../images /pokeball.png" align="center" width="150" height="150">Menu</h1>
             <aside class="secOne-container">
                 <figure class="secOne-item">
-                    <img src="../images /countries.png" class="secOne-item-img" alt=" Image of the Earth">
+                    <img src="../images /flags.png" class="secOne-item-img" alt=" Image of flags from different countries">
                     <button class="btn" onclick="window.location.href='countries.html'">Countries</a></button>
                 </figure>
                 <figure class="secOne-item">
@@ -127,12 +129,19 @@
                         <button class="btn" onclick="window.location.href='soccer.html'">Soccer</button>
                     </figcaption>
                 </figure>
+                
             </aside>
+            <img src="../images /pokemon.png" alt="Image of Pokémon characters" align="center">
 
 
         </section>
+          
+       
 
     </div>
+ 
+
+   
 
 
     <div id="exit"><button  id="btn2">EXIT</button></div> 
