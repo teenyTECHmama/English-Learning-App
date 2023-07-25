@@ -6,22 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
 
-          function jumpButton(button) {
-    button.style.animation = 'jump 0.6s ease';
-    setTimeout(() => {
-      button.style.animation = '';
-    }, 600);
-  }
-
-  // Add event listeners to the images to trigger the jump effect on their respective buttons
-  document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-      const img = button.closest('.secOne-item').querySelector('.secOne-item-img');
-      img.addEventListener('click', () => jumpButton(button));
-    });
-  });
-
+function jumpButton(button) {
+            button.style.animation = 'jump 0.6s ease';
+            setTimeout(() => {
+              button.style.animation = '';
+            }, 600);
+          }
+        
+          // Add event listeners to the images to trigger the jump effect on their respective buttons
+          document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+              const img = button.closest('.secOne-item').querySelector('.secOne-item-img');
+              img.addEventListener('click', () => jumpButton(button));
+            });
+          });   
     </script>
     <style>
 
@@ -81,6 +80,21 @@
             touch-action: manipulation;
         }
 
+        .btn {
+            font-size: 29px;
+            font-weight: 700;
+            text-align: center;
+            width: 460px;
+            height: 150px;
+            background: url("../button.png") no-repeat scroll 0 0 transparent;
+            background-size: 320px;
+            background-position: center;
+            color: black;
+            border:none;
+            
+            
+        }
+
         .secOne-container{
             display: flex;
             gap: 10vw;
@@ -90,13 +104,14 @@
         }
 
         .secOne-item {
-            width: 10vw;
+            width: 7vw;
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
             gap: 20px;
             padding-bottom: 0vh;
+            cursor: none
             
         }
 
@@ -112,8 +127,8 @@
         }
 
         .secOne-item-img {
-            height: 20vw;
-            width: 20vw;
+            height: 15vw;
+            width: 15vw;
             border-radius: 30px;
             border: var(--mid-blue-button) 15px solid;
             transition: all 1s;
@@ -127,7 +142,7 @@
                 transform: translate(50%,-50%);
                 text-transform: uppercase;
                 font-family: verdana;
-                font-size: 7em;
+                font-size: 11em;
                 font-weight: 700;
                 color: #000000;
                 text-shadow: 1px 1px 1px #919191,
@@ -281,6 +296,12 @@
     animation-duration: 11s;
 }
 
+.pokegp {
+    position:relative;
+    overflow: hidden;
+
+
+}
 
 
 
@@ -297,6 +318,10 @@
         <div id="back">
             <button id="btn1" onclick="window.location.href='../index.html'">BACK</button>
         </div> 
+        <audio controls autoplay loop>
+            <source src="../Ian Post - Breaking Point - No FX.mp3" type="audio/mpeg"/>
+            Your browser does not support the audio.
+        </audio>
         
         <div class="main-area">
         <div class="circles">
@@ -305,7 +330,7 @@
             <aside class="secOne-container">
                 <figure class="secOne-item">
                     <img src="../images /flags.png" id="img1" class="secOne-item-img" alt=" Image of flags from different countries">
-                    <figcaption><button class="btn" onclick="window.location.href='countries.html'">Countries</a></button></figcaption>
+                    <figcaption><button class="btn" onclick="window.location.href='countries.html'">Countries</button></figcaption>
                 </figure>
                 <figure class="secOne-item">
                     <img src="../images /books.png" id="img2" class="secOne-item-img" alt=" Image of the books">
@@ -316,9 +341,9 @@
                     <figcaption>
                         <button class="btn" onclick="window.location.href='soccer.html'">Soccer</button>
                     </figcaption>
-                </figure>   
+                </figure>  
             </aside>
-            <img class="pokegp" src="../images /pokemon.png" alt="Image of Pokémon characters">
+            <img class="pokegp" src="../images /pokemon.png" alt="Image of Pokémon characters" width="1800">
                     <div></div>
                     <div></div>
                     <div></div>
