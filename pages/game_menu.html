@@ -4,17 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/app.js" defer></script>
+    <script>
+
+          function jumpButton(button) {
+    button.style.animation = 'jump 0.6s ease';
+    setTimeout(() => {
+      button.style.animation = '';
+    }, 600);
+  }
+
+  // Add event listeners to the images to trigger the jump effect on their respective buttons
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+      const img = button.closest('.secOne-item').querySelector('.secOne-item-img');
+      img.addEventListener('click', () => jumpButton(button));
+    });
+  });
+
+    </script>
     <style>
 
+        .title {
+            position:fixed;
+            transform: translate(-50%,-50%);
+            color:black;
+            font-size: 40px;
+            font-weight: 800;
+            z-index: 999;
+        }
+        .main-area {
+            width: 100%;
+            height:150vh;
+            background-position: 0px;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            cursor: none;
+        }
+
          body {
+            
             background: rgb(94,224,230);
             background: linear-gradient(90deg, rgba(94,224,230,1) 0%, rgba(0,76,174,1) 100%);
             background-position: 0px;
-            -webkit-background-size: 100% 100%;
-            -moz-background-size: 100% 100%;
-            -o-background-size: 100% 100%;
-            background-size: 100% 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            cursor: none;
         }
 
 
@@ -44,7 +83,10 @@
 
         .secOne-container{
             display: flex;
-            gap: 20vw;
+            gap: 10vw;
+            align-items: center;
+            position: relative;
+            padding-bottom: 9vh;
         }
 
         .secOne-item {
@@ -54,22 +96,27 @@
             align-items: center;
             position: relative;
             gap: 20px;
+            padding-bottom: 0vh;
+            
         }
+
+    
         .secOne-wrapper {
             
             padding: 5vh 5vw;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 15vh;
+            padding-bottom: 0vh;
+            min-height: 100vh;
         }
 
         .secOne-item-img {
-            background-color: #f5f5f5;
-            height: 30vw;
-            width: 30vw;
-            border-radius: 300px;
+            height: 20vw;
+            width: 20vw;
+            border-radius: 30px;
             border: var(--mid-blue-button) 15px solid;
+            transition: all 1s;
         }
 
             #name {
@@ -80,9 +127,9 @@
                 transform: translate(50%,-50%);
                 text-transform: uppercase;
                 font-family: verdana;
-                font-size: 5em;
+                font-size: 7em;
                 font-weight: 700;
-                color: #f5f5f5;
+                color: #000000;
                 text-shadow: 1px 1px 1px #919191,
                     1px 2px 1px #919191,
                     1px 3px 1px #919191,
@@ -100,50 +147,200 @@
                 
     }
 
+ .secOne-item-img:hover{
+    transform: scale(1.2);
+    border-radius: 500px;
 
+ }
+
+ @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+
+  .circles {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+  }
+
+  @keyframes animate {
+    0%{
+        opacity: 1;
+        border-radius: 0;
+        transform: translateY(0) rotate(0deg);
+
+
+    }
+    100%{
+        opacity: 0;
+        border-radius: 50px;
+        transform: translateY(-1000px) rotate(720deg);
+
+
+    }
+  }
+
+  .circles div {
+   position: absolute;
+   display: block;
+   width: 20px;
+   height: 20px;
+   background: rgb(34, 134, 249);
+   bottom: -150px;
+   animation: animate 25s linear infinite;
+
+  }
+
+.circles div:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+
+}
+
+.circles div:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles div:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles div:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles div:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles div:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles div:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles div:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles div:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles div:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+
+ 
     
 
     </style>
+
     <title>Menu</title>
+
 </head>
 <body>
     <div id="menu_container">
         <div id="back">
             <button id="btn1" onclick="window.location.href='../index.html'">BACK</button>
         </div> 
-
+        
+        <div class="main-area">
+        <div class="circles">
         <section class="secOne-wrapper"> 
-            <h1 id="name">Game <img src="../images /pokeball.png" align="center" width="150" height="150">Menu</h1>
+            <h1 class="title" id="name">Game<img src="../images /pokeball.png"  width="200" height="200" align="center">Menu</h1>
             <aside class="secOne-container">
                 <figure class="secOne-item">
-                    <img src="../images /flags.png" class="secOne-item-img" alt=" Image of flags from different countries">
-                    <button class="btn" onclick="window.location.href='countries.html'">Countries</a></button>
+                    <img src="../images /flags.png" id="img1" class="secOne-item-img" alt=" Image of flags from different countries">
+                    <figcaption><button class="btn" onclick="window.location.href='countries.html'">Countries</a></button></figcaption>
                 </figure>
                 <figure class="secOne-item">
-                    <img src="../images /books.png" class="secOne-item-img" alt=" Image of the books">
+                    <img src="../images /books.png" id="img2" class="secOne-item-img" alt=" Image of the books">
                     <figcaption><button class="btn" onclick="window.location.href='story.html'">Stories</button></figcaption>
                 </figure>
                 <figure class="secOne-item">
-                    <img src="../images /soccerkiddos.png" class="secOne-item-img" alt=" Image of the children playing soccer">
+                    <img src="../images /soccerkiddos.png" id="img3" class="secOne-item-img" alt=" Image of the children playing soccer">
                     <figcaption>
                         <button class="btn" onclick="window.location.href='soccer.html'">Soccer</button>
                     </figcaption>
-                </figure>
-                
+                </figure>   
             </aside>
-            <img src="../images /pokemon.png" alt="Image of Pokémon characters" align="center">
-
-
+            <img class="pokegp" src="../images /pokemon.png" alt="Image of Pokémon characters">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div><div id="exit" onclick="window.location.href='../index.html'"><button  id="btn2">EXIT</button></div>
+            </div>
+            
+            
         </section>
-          
-       
+        
 
-    </div>
- 
+    
+       
 
    
 
-
-    <div id="exit"><button  id="btn2">EXIT</button></div> 
 </body>
+</div>
 </html>
