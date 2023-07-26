@@ -15,7 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100vh;;
             margin: 0;
         }
 
@@ -42,13 +42,19 @@
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
+            padding-bottom: 10px;
         }
         
+        
+     
 
         #video-iframe {
             width: 1260px;
-            height: 815px;
+            height: 815px;;
+            
         }
+
+       
 
         #title {
             position: relative;
@@ -89,7 +95,7 @@
             justify-content: center;
             line-height: 24px;
             max-width: 300%;
-            padding: 0 25px;
+            padding: 0px 25px;
             position: absolute;
             bottom: 20px;
             left: 20px;
@@ -98,6 +104,7 @@
             user-select: none;
             -webkit-user-select: none;
             touch-action: manipulation;
+            
         }
 
     </style>
@@ -107,15 +114,15 @@
    
      <button id="back-btn" onclick="window.location.href='game_menu.html'">BACK</button><br>
  
-   
+    
 
     <div id="video-container">
-        <h1 id="title"><img src="../images /football_association_pikachu_with_poke_ball_soccer_ball.png" width="500" height="500"> Let's Play: Soccer</h1>
+        <h1 id="title"><img src="../images /football_association_pikachu_with_poke_ball_soccer_ball.png" width="400" height="400"> Let's Play: Soccer</h1>
         <iframe id="video-iframe" src="https://en.islcollective.com/english-esl-video-lessons/embed/418568" frameborder="0" allowfullscreen align-items="center"> </iframe>
-     
-     
-    </div> 
+
         <button id="exit-btn" onclick="exitApp()">EXIT</button>
+    </div> 
+    
 
    
     <script>
